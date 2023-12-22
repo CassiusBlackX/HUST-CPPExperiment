@@ -1,5 +1,0 @@
-# ninja log v5
-2	291	7179741649258002	CMakeFiles/ex1.dir/main.cpp.obj	c8d4989aed04a430
-1	100	7240958898602677	build.ninja	a0a14eccecda4bde
-5	310	7179735242959370	CMakeFiles/ex1.dir/Queue.cpp.obj	b8169a32aedccf03
-291	367	7179741649996343	ex1.exe	6ba36164dfb6327e
