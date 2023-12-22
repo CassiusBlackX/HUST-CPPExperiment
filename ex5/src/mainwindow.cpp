@@ -118,6 +118,12 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(findAction, &QAction::triggered, this, &MainWindow::findPointByName);
     connect(nearestCheckBox,&QCheckBox::clicked,this, &MainWindow::onNearest_changed);
     connect(leastCheckBox,&QCheckBox::clicked,this, &MainWindow::onLeast_changed);
+
+    mywidgets = new MyWidget * [bp->getBusStopsNum()+1];
+    for(int i=1;i<=bp->getBusStopsNum();i++){
+        Point *point = bp->getBusStops()[i];
+        mywidgets[i] = new MyWidget(point, this);
+    }
 }
 
 MainWindow::~MainWindow() {
@@ -161,6 +167,7 @@ void MainWindow::paintEvent(QPaintEvent *event) {
         busStopsRect.setRight(_p->getPosition().first+6);
         mapPainter.drawEllipse(busStopsRect);
     }
+
 
     // draw start and end point
     if(startPos.x() != 0){
@@ -408,3 +415,4 @@ void MainWindow::onLeast_changed() {
         nearestCheckBox->setChecked(true);
     }
 }
+

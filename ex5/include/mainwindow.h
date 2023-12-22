@@ -9,6 +9,7 @@
 #include "BusMap.h"
 #include "Point.h"
 #include "dialog.h"
+#include "mywidget.h"
 #include <QMouseEvent>
 #include <QString>
 #include <string>
@@ -23,6 +24,7 @@
 #include <QPainter>
 #include <QPen>
 #include <QMessageBox>
+#include <QToolTip>
 
 class MainWindow : public QMainWindow {
 Q_OBJECT
@@ -39,6 +41,7 @@ private:
     QCheckBox *nearestCheckBox;
     QCheckBox *leastCheckBox;
     QMenuBar *menuBar;
+    MyWidget ** mywidgets;
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);

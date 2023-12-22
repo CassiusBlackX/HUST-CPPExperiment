@@ -26,6 +26,8 @@ add_executable(ex5 src/main.cpp
         include/mainwindow.h
         src/dialog.cpp
         include/dialog.h
+        src/mywidget.cpp
+        include/mywidget.h
 )
 target_link_libraries(ex5
         Qt::Core
